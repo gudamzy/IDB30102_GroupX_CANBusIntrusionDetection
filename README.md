@@ -1,122 +1,147 @@
 # Evaluating the Cross-Vehicle Performance of Machine Learning-Based Intrusion Detection Models for Automotive CAN Bus Networks
 
-## Course
-IDB30102 - Research Methodology
+IDB30102 Research Methodology · Assignment 2 · UniKL MIIT · July 2026 Semester
 
-## Group Information
+| Item | Details |
+|---|---|
+| **Group** | Group X |
+| **Assigned Research Area** | Automotive and Vehicle Security |
+| **Lecturer** | Dr. Delina Beh Mei Yin |
 
-**Group:** Group X
+## Group Members
 
-### Group Members
-- Mohamad Syahmi Amrin Bin Mursham - 52215126522
-- Muhammad Imran Zafri Bin Mohd Suhaini - 52215226113
-- Muhammad Adam Danish Bin Mohd Anis - 52215125900
-- Muhammad Muttakin Bin Mat Hussin - 52215226045
-
-## Research Area
-Automotive and Vehicle Security
+| No. | Member | Student ID |
+|---|---|---|
+| 1 | Muhammad Adam Danish bin Mohd Anis | 52215125900 |
+| 2 | Mohamad Syahmi Amrin bin Mursham | 52215125622 |
+| 3 | Muhammad Muttakin bin Mat Hussin | 52215226045 |
+| 4 | Muhammad Imran Zafri bin Mohd Suhaini | 52215226113 |
 
 ## Research Problem
-Many CAN bus intrusion detection studies report high performance, but most models are trained and tested using data from the same dataset or vehicle. This makes it difficult to know whether the models can maintain similar performance when they are tested using data from another vehicle.
 
-Another issue is the lack of a consistent evaluation approach because previous studies use different datasets, preprocessing methods, and performance metrics.
+Two main issues are addressed in this research.
+
+1. **Limited cross-vehicle evaluation.**  
+Many CAN bus intrusion detection studies train and test their models using data from the same dataset or vehicle. However, CAN identifiers and message patterns may differ between vehicle models and manufacturers. Therefore, a model that performs well on one vehicle may not produce the same performance on another vehicle.
+
+2. **Inconsistent evaluation approaches.**  
+Previous studies use different datasets, preprocessing methods, class distributions, labelling approaches, hardware environments, and performance metrics. This makes direct comparison between models difficult.
 
 ## Research Aim
+
 To evaluate the cross-vehicle performance of machine learning-based intrusion detection models for automotive CAN bus networks.
 
 ## Research Objectives
-1. To identify suitable machine learning techniques and multi-vehicle CAN bus data for automotive intrusion detection.
-2. To implement selected machine learning models for detecting normal and malicious CAN bus traffic.
-3. To evaluate and compare the performance of the selected models across different vehicles using accuracy, precision, recall, F1-score, and false-positive rate.
 
-   ## Research Objective Mapping
-
-| Research Objective | Repository Evidence |
-|---|---|
-| Objective 1: Identify suitable machine learning techniques and multi-vehicle CAN bus data | `01_Research_Papers/`, `02_Literature_Review/`, `05_Data_or_Sample_Input/` |
-| Objective 2: Implement selected machine learning models for detecting normal and malicious CAN bus traffic | `04_Source_Code/` |
-| Objective 3: Evaluate and compare the selected models across different vehicles | `04_Source_Code/`, `06_Results_or_Expected_Output/` |
+1. **RO1:** To identify suitable machine learning techniques and multi-vehicle CAN bus data for automotive intrusion detection.
+2. **RO2:** To implement selected machine learning models for detecting normal and malicious CAN bus traffic.
+3. **RO3:** To evaluate and compare the performance of the selected models across different vehicles using accuracy, precision, recall, F1-score, and false-positive rate.
 
 ## Proposed Solution
-This research will evaluate three machine learning models:
+
+This research evaluates three machine learning models:
+
 - Random Forest
 - Decision Tree
 - Support Vector Machine
 
-The models will be tested using multi-vehicle CAN bus data under same-vehicle and cross-vehicle evaluation conditions.
+The models will be trained and evaluated using multi-vehicle CAN bus data. Same-vehicle evaluation will first be used as the baseline. Cross-vehicle evaluation will then be performed to determine whether the models can maintain their detection performance when tested using data from different vehicles.
 
 ## Research Methodology
-Experimental Research Methodology
 
-## Development Model
-Not applicable. The study focuses on experimental evaluation and does not develop a complete software system.
+| Layer | Selection |
+|---|---|
+| **Research Methodology** | Experimental Research Methodology |
+| **Development Model** | Not applicable |
+
+The Experimental Research Methodology is selected because the study focuses on comparing machine learning models under controlled experimental conditions.
+
+A separate software development model is not required because this research does not develop a complete software system or application. Python scripts are used only to support data preparation, model training, and performance evaluation.
 
 ## Proposed Dataset
-can-train-and-test dataset
 
-## Evaluation Metrics
+The proposed dataset is **can-train-and-test** by Lampe and Meng (2024).
+
+The dataset contains CAN bus data from four vehicles and two vehicle manufacturers, including normal and malicious CAN traffic with multiple attack types.
+
+The dataset is suitable for this research because it supports evaluation across different vehicle environments.
+
+## Proposed Evaluation Plan
+
+The evaluation consists of two main stages:
+
+1. **Same-vehicle evaluation** – the model is trained and tested using data from the same vehicle environment. This serves as the baseline.
+2. **Cross-vehicle evaluation** – the model is trained using data from one vehicle environment and evaluated using data from a different vehicle environment.
+
+The following performance metrics will be used:
+
 - Accuracy
 - Precision
 - Recall
 - F1-score
-- False-Positive Rate
+- False-positive rate
 
-  ## Evaluation Plan
-
-The selected machine learning models will first be evaluated using a same-vehicle setting as the baseline. Each model will then undergo cross-vehicle evaluation, where training data from one vehicle is used and the model is tested using data from a different vehicle.
-
-The can-train-and-test dataset will be used because it contains CAN bus data from multiple vehicles. Random Forest, Decision Tree, and Support Vector Machine will be evaluated under the same experimental conditions.
-
-Performance will be compared using accuracy, precision, recall, F1-score, and false-positive rate (FPR). The comparison will be used to determine how well each model maintains its intrusion detection performance when applied to different vehicle data.
+The results from both evaluation stages will be compared to determine how well each model generalises across different vehicles.
 
 ## Proposed Architecture
 
-The proposed research architecture consists of five main stages: multi-vehicle CAN bus data preparation, data preprocessing, machine learning model implementation, experimental evaluation, and performance comparison.
+The proposed research architecture consists of five main stages:
 
-The preprocessed CAN bus data will be used to train Random Forest, Decision Tree, and Support Vector Machine models. The models will first undergo same-vehicle evaluation as the baseline, followed by cross-vehicle evaluation using data from different vehicles. Their performance will then be compared using accuracy, precision, recall, F1-score, and false-positive rate.
+1. Multi-vehicle CAN bus data preparation
+2. Data preprocessing
+3. Machine learning model implementation
+4. Same-vehicle and cross-vehicle evaluation
+5. Performance comparison and analysis
 
-The detailed research architecture and flowchart are available in the [`03_Architecture_and_Flowchart/`](03_Architecture_and_Flowchart/) folder.
+The detailed research architecture and flowchart are available in `03_Architecture_and_Flowchart/`.
+
+## Research Objective Mapping
+
+| Research Objective | Supporting Component | GitHub Location |
+|---|---|---|
+| RO1 | Research papers, literature review, dataset information | `01_Research_Papers/`, `02_Literature_Review/`, `05_Data_or_Sample_Input/` |
+| RO2 | Preliminary implementation of Random Forest, Decision Tree, and Support Vector Machine | `04_Source_Code/` |
+| RO3 | Same-vehicle and cross-vehicle evaluation, performance metrics, expected results | `04_Source_Code/`, `06_Results_or_Expected_Output/` |
 
 ## Repository Structure
 
-- `01_Research_Papers/` - Research papers and paper summaries
-- `02_Literature_Review/` - Literature review supporting materials
-- `03_Architecture_and_Flowchart/` - Proposed research architecture and flowchart
-- `04_Source_Code/` - Preliminary machine learning and preprocessing code
-- `05_Data_or_Sample_Input/` - Dataset information and sample input
-- `06_Results_or_Expected_Output/` - Preliminary or expected outputs
-- `07_References/` - References and external resources
+- `01_Research_Papers/` – Key research paper summaries and analysis
+- `02_Literature_Review/` – Literature review, study comparison and research gap
+- `03_Architecture_and_Flowchart/` – Proposed research architecture and flowchart
+- `04_Source_Code/` – Preliminary Python implementation
+- `05_Data_or_Sample_Input/` – Dataset information and sample CAN bus input
+- `06_Results_or_Expected_Output/` – Expected results and evaluation output
+- `07_References/` – References and supporting resources
 
 ## Tools and Technologies
+
 - Python
-- scikit-learn
 - pandas
 - NumPy
-- Jupyter Notebook / VS Code
+- scikit-learn
+- matplotlib
+- pytest
+- Jupyter Notebook / Visual Studio Code
 - GitHub
 
-  ## Execution Instructions
+## Preliminary Source Code
 
-### Requirements
-The preliminary implementation requires Python 3 and the following libraries:
+The current source code is preliminary and demonstrates the planned experimental workflow.
+
+The main scripts include:
+
+- `data_preprocessing.py`
+- `train_models.py`
+- `evaluation_metrics.py`
+- `cross_vehicle_evaluation.py`
+
+Install the required libraries using:
 
 ```bash
-pip install pandas numpy scikit-learn
+pip install -r 04_Source_Code/requirements.txt
 ```
 
-### Source Code
-The preliminary Python scripts are available in the `04_Source_Code/` folder:
-
-- `data_preprocessing.py` - Loads and prepares CAN bus data.
-- `train_models.py` - Defines the Random Forest, Decision Tree, and Support Vector Machine models.
-- `evaluation_metrics.py` - Calculates accuracy, precision, recall, F1-score, and false-positive rate.
-- `cross_vehicle_evaluation.py` - Provides the same-vehicle and cross-vehicle evaluation structure.
-
-### Running the Preliminary Code
-
-Clone or download this repository and open the project directory.
-
-Run the preliminary modules using:
+Example execution:
 
 ```bash
 python 04_Source_Code/data_preprocessing.py
@@ -125,4 +150,51 @@ python 04_Source_Code/evaluation_metrics.py
 python 04_Source_Code/cross_vehicle_evaluation.py
 ```
 
-The current source code represents the preliminary implementation. Full model training and experimental evaluation will be performed using the selected multi-vehicle CAN bus dataset.
+The complete experimental implementation and final results will be produced during the later research stage.
+
+## Data and Sample Input
+
+The full can-train-and-test dataset is not stored directly in this repository.
+
+The `05_Data_or_Sample_Input/` folder contains:
+
+- Dataset information
+- Dataset source and DOI
+- Sample CAN bus input structure
+
+The sample input is provided only to demonstrate the expected format and is not extracted from the actual can-train-and-test dataset.
+
+## Expected Output
+
+At the proposal stage, final experimental results are not yet available.
+
+The expected output will compare:
+
+- Random Forest
+- Decision Tree
+- Support Vector Machine
+
+for both:
+
+- Same-vehicle evaluation
+- Cross-vehicle evaluation
+
+The results will be compared using accuracy, precision, recall, F1-score, and false-positive rate.
+
+## Ethics
+
+This research uses a publicly available automotive CAN bus dataset.
+
+The experiments are conducted offline and do not involve:
+
+- Human participants
+- Live vehicles
+- Third-party systems
+
+The dataset is referenced through its official source and is not redistributed in this repository.
+
+## Licence
+
+The source code in this repository is provided under the MIT License.
+
+Research papers, datasets, and external resources remain the property of their respective authors and are acknowledged in `07_References/`.
