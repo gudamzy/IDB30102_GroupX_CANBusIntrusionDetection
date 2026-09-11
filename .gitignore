@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# real dataset must not be committed
+data/
+can-train-and-test/
+06_Results_or_Expected_Output/real_run/
