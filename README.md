@@ -69,6 +69,14 @@ The can-train-and-test dataset will be used because it contains CAN bus data fro
 
 Performance will be compared using accuracy, precision, recall, F1-score, and false-positive rate (FPR). The comparison will be used to determine how well each model maintains its intrusion detection performance when applied to different vehicle data.
 
+## Proposed Architecture
+
+The proposed research architecture consists of five main stages: multi-vehicle CAN bus data preparation, data preprocessing, machine learning model implementation, experimental evaluation, and performance comparison.
+
+The preprocessed CAN bus data will be used to train Random Forest, Decision Tree, and Support Vector Machine models. The models will first undergo same-vehicle evaluation as the baseline, followed by cross-vehicle evaluation using data from different vehicles. Their performance will then be compared using accuracy, precision, recall, F1-score, and false-positive rate.
+
+The detailed research architecture and flowchart are available in the [`03_Architecture_and_Flowchart/`](03_Architecture_and_Flowchart/) folder.
+
 ## Repository Structure
 
 - `01_Research_Papers/` - Research papers and paper summaries
