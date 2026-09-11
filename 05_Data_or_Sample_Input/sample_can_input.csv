@@ -1,0 +1,6 @@
+timestamp,can_id,data_length,data_bytes,label,vehicle
+0.001,123,8,11 22 33 44 55 66 77 88,normal,Vehicle_A
+0.002,124,8,10 20 30 40 50 60 70 80,normal,Vehicle_A
+0.003,321,8,FF FF FF FF FF FF FF FF,attack,Vehicle_A
+0.004,223,8,12 24 36 48 5A 6C 7E 90,normal,Vehicle_B
+0.005,456,8,AA AA AA AA AA AA AA AA,attack,Vehicle_B
