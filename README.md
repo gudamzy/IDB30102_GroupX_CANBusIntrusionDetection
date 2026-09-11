@@ -29,6 +29,14 @@ To evaluate the cross-vehicle performance of machine learning-based intrusion de
 2. To implement selected machine learning models for detecting normal and malicious CAN bus traffic.
 3. To evaluate and compare the performance of the selected models across different vehicles using accuracy, precision, recall, F1-score, and false-positive rate.
 
+   ## Research Objective Mapping
+
+| Research Objective | Repository Evidence |
+|---|---|
+| Objective 1: Identify suitable machine learning techniques and multi-vehicle CAN bus data | `01_Research_Papers/`, `02_Literature_Review/`, `05_Data_or_Sample_Input/` |
+| Objective 2: Implement selected machine learning models for detecting normal and malicious CAN bus traffic | `04_Source_Code/` |
+| Objective 3: Evaluate and compare the selected models across different vehicles | `04_Source_Code/`, `06_Results_or_Expected_Output/` |
+
 ## Proposed Solution
 This research will evaluate three machine learning models:
 - Random Forest
