@@ -1,20 +1,21 @@
-# Architecture and Flowchart
+# 03_Architecture_and_Flowchart
 
-This folder contains the proposed research architecture and flowchart for evaluating the cross-vehicle performance of machine learning-based intrusion detection models for automotive CAN bus networks.
+The same figures as Chapter 3 of the proposal. If a figure changes in the proposal, replace the file here in the same commit.
 
-## Figure 3.1 – Proposed Research Architecture
+| File | Proposal figure |
+|---|---|
+| `architecture.jpeg` | Figure 3.1 Proposed Research Architecture |
+| `flowchart.jpeg` | Figure 3.2 Proposed Research Flowchart |
+| `gantt_chart.png` | Figure 3.3 Proposed Gantt Chart |
+| `draw_figures.py` | Script that draws Figures 3.1 and 3.2 (matplotlib) |
 
-The proposed architecture begins with a multi-vehicle CAN bus dataset followed by data preprocessing. The processed data will be used to train and evaluate three machine learning models: Random Forest, Decision Tree, and Support Vector Machine.
+## Data flow
 
-Two evaluation settings will be used: same-vehicle evaluation as the baseline and cross-vehicle evaluation to examine model generalisation. The models will be evaluated using accuracy, precision, recall, F1-score, and false-positive rate. The final stage compares the performance of the models across different vehicle data.
+1. **Dataset** – can-train-and-test, four vehicles from two manufacturers; each sub-dataset has `train_01`, `test_01` (same vehicle) and `test_02` (different vehicle).
+2. **Preprocessing** – load each capture, convert IDs and data bytes, keep per-message labels, compute time since the previous frame with the same ID.
+3. **Models** – Random Forest, Decision Tree and linear SVM trained on the same 500,000-frame stratified sample of `train_01`.
+4. **Evaluation** – same-vehicle (`test_01`, baseline) and cross-vehicle (`test_02`).
+5. **Metrics** – accuracy, precision, recall, F1-score, false-positive rate, F1 retention.
+6. **Comparison** – which model keeps its performance best when the vehicle changes.
 
-## Figure 3.2 – Proposed Research Flowchart
-
-The research flowchart shows the experimental process from dataset preparation until performance analysis. After obtaining and preprocessing the CAN bus data, relevant features and labels will be prepared for model training.
-
-Random Forest, Decision Tree, and Support Vector Machine will first undergo same-vehicle evaluation. Cross-vehicle evaluation will then be performed by testing the trained models using data from different vehicles. The resulting performance metrics will be compared to determine how well each model generalises across vehicles.
-
-## Files
-
-- `Figure_3.1_Proposed_Research_Architecture.png` – Proposed research architecture.
-- `Figure_3.2_Proposed_Research_Flowchart.jpg` – Proposed research flowchart.
+Code for each stage is in `04_Source_Code/`.
