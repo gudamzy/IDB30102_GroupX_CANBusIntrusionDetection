@@ -1,4 +1,5 @@
 02_Literature_Review
+
 Supporting material for Chapter 2 of the proposal. The content matches Chapter 2; if Chapter 2
 changes, update these files in the same commit.
 File	Content
