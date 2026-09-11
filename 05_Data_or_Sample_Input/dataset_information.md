@@ -6,6 +6,12 @@ can-train-and-test
 ## Source
 Lampe and Meng (2024)
 
+## Official Dataset Reference
+Lampe, B., & Meng, W. (2024). Can-train-and-test: A curated CAN dataset for automotive intrusion detection. Computers & Security, 140, 103777.
+
+DOI:
+https://doi.org/10.1016/j.cose.2024.103777
+
 ## Purpose
 The dataset is selected because it supports the evaluation of CAN bus intrusion detection models across multiple vehicles.
 
