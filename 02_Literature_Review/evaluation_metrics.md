@@ -28,4 +28,4 @@ where **FP** represents false positives and **TN** represents true negatives.
 
 The preliminary implementation of the evaluation metrics is available in:
 
-`04_Source_Code/evaluation_metrics.py`
+`04_Source_Code/canids/metrics.py`
