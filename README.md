@@ -78,3 +78,35 @@ can-train-and-test dataset
 - NumPy
 - Jupyter Notebook / VS Code
 - GitHub
+
+  ## Execution Instructions
+
+### Requirements
+The preliminary implementation requires Python 3 and the following libraries:
+
+```bash
+pip install pandas numpy scikit-learn
+```
+
+### Source Code
+The preliminary Python scripts are available in the `04_Source_Code/` folder:
+
+- `data_preprocessing.py` - Loads and prepares CAN bus data.
+- `train_models.py` - Defines the Random Forest, Decision Tree, and Support Vector Machine models.
+- `evaluation_metrics.py` - Calculates accuracy, precision, recall, F1-score, and false-positive rate.
+- `cross_vehicle_evaluation.py` - Provides the same-vehicle and cross-vehicle evaluation structure.
+
+### Running the Preliminary Code
+
+Clone or download this repository and open the project directory.
+
+Run the preliminary modules using:
+
+```bash
+python 04_Source_Code/data_preprocessing.py
+python 04_Source_Code/train_models.py
+python 04_Source_Code/evaluation_metrics.py
+python 04_Source_Code/cross_vehicle_evaluation.py
+```
+
+The current source code represents the preliminary implementation. Full model training and experimental evaluation will be performed using the selected multi-vehicle CAN bus dataset.
