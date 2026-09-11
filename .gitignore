@@ -1,9 +1,23 @@
+# Python cache
 __pycache__/
 *.pyc
-.pytest_cache/
-.venv/
+*.pyo
 
-# real dataset must not be committed
+# Pytest cache
+.pytest_cache/
+
+# Virtual environment
+.venv/
+venv/
+
+# Real dataset must not be committed
 data/
 can-train-and-test/
+
+# Real experiment outputs
 06_Results_or_Expected_Output/real_run/
+
+# OS / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
