@@ -3,6 +3,16 @@
 ## Course
 IDB30102 - Research Methodology
 
+## Group Information
+
+**Group:** Group X
+
+### Group Members
+- Mohamad Syahmi Amrin Bin Mursham - 52215126522
+- Muhammad Imran Zafri Bin Mohd Suhaini - 52215226113
+- Muhammad Adam Danish Bin Mohd Anis - 52215125900
+- Muhammad Muttakin Bin Mat Hussin - 52215226045
+
 ## Research Area
 Automotive and Vehicle Security
 
