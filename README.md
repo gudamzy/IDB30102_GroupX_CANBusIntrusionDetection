@@ -61,6 +61,14 @@ can-train-and-test dataset
 - F1-score
 - False-Positive Rate
 
+  ## Evaluation Plan
+
+The selected machine learning models will first be evaluated using a same-vehicle setting as the baseline. Each model will then undergo cross-vehicle evaluation, where training data from one vehicle is used and the model is tested using data from a different vehicle.
+
+The can-train-and-test dataset will be used because it contains CAN bus data from multiple vehicles. Random Forest, Decision Tree, and Support Vector Machine will be evaluated under the same experimental conditions.
+
+Performance will be compared using accuracy, precision, recall, F1-score, and false-positive rate (FPR). The comparison will be used to determine how well each model maintains its intrusion detection performance when applied to different vehicle data.
+
 ## Repository Structure
 
 - `01_Research_Papers/` - Research papers and paper summaries
